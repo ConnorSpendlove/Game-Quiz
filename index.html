@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Game Quiz</title>
-    <link rel = "stylesheet" a href = "style.css"/>
+    <title>JavaScript Quiz</title>
+    <link rel = "stylesheet" a href = "assets/style.css"/>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <header class = "header">
+        <h1>Java<span id = "hero">Script</span> Quiz!</h1>
+    </header>
+    <main>   
+        <section class = "container">
+            <div id = "questions-card" class = "hide">
+                <div id = "questions">Question</div>
+                <div id = "answers" class = "allButtons">
+                    <button class = "btn">Answer 1</button>
+                    <button class = "btn">Answer 2</button>
+                    <button class = "btn">Answer 3</button>
+                    <button class = "btn">Answer 4</button>
+                </div>        
+            </div>
+            <div class = "Start">
+                <button id = "start-btn" class = "btn start-btn">Start Quiz!</button>
+            </div>
+        </section>
+    </main>
+    <script src="assets/script.js"></script>
 </body>
 </html>
