@@ -1,2 +1,2 @@
-# Game-Quiz
-A Timed Gaming Quiz
+# JavaScript-Quiz
+A Timed JavaScript Quiz
