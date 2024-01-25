@@ -1,76 +1,92 @@
+// Retrieves start and next buttons
 var startButton = document.getElementById('start-btn')
-var questionsContainer = document.getElementById('questions-card')
-var questionElement = document.getElementById('question')
-var answerButton = document.getElementById('btn')
-var shuffledQuestions, currentQuestionIndex
+var nextButton = document.getElementById('next-btn')
+// Retrieves all question sets
+var questionsContainer1 = document.getElementById('questions-card1')
+var questionsContainer2 = document.getElementById('questions-card2')
+var questionsContainer3 = document.getElementById('questions-card3')
+var questionsContainer4 = document.getElementById('questions-card4')
+var questionsContainer5 = document.getElementById('questions-card5')
 
+// Retrieves true and false values of each answer
+var buttonFalse = document.getElementById('false')
+var buttonTrue = document.getElementById('true')
+
+var time = 60
+var timer = document.getElementById("timer-element")
+
+var score = 0;
+
+
+// Puts all questions into an arrary
+var allQuestions = [questionsContainer1, questionsContainer2, questionsContainer3, questionsContainer4, questionsContainer5]
+
+// starts the game on click
 startButton.addEventListener('click', startGame)
-
 function startGame () {
 console.log('Started');
+// hides the start button on click
 startButton.classList.add('hide')
-questionsContainer.classList.remove('hide')
-shuffledQuestions = questions.sort(() => Math.random() - .5)
-currentQuestionIndex = 0
-nextQuestion();
+// unhides the first question on click
+questionsContainer1.classList.remove('hide')
+// unhides the next button on click
+nextButton.classList.remove('hide')
+// unhides the timer on click
+timer.classList.remove('hide')
+// starts the timer
+startTimer ();
 }
 
-// answerButton.addEventListener('click', nextQuestion)
+ // sets starting index
+var currentIndex = 0
 
+// Allows the questions to scroll on click
+nextButton.addEventListener('click', nextQuestion)
 function nextQuestion(){
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    // If no questions are available, calls displayScore function
+    if(currentIndex >= allQuestions.length - 1){
+        displayScore()
+    } else {
+     // sets current index to hide
+     allQuestions[currentIndex].classList.add("hide")
+     // adds 1 to the index
+     currentIndex = (currentIndex + 1)
+     // removes hide class from new index
+     allQuestions[currentIndex].classList.remove('hide') 
+    }
+     
+}
+
+
+
+// Changes innerHTML of timer div and decreases the time ever second until 0, then displays the users score.
+var timerElement;
+function startTimer(){
+    if (time <= 0){
+        return
+    } else {
+        timerElement = setInterval(()=>{
+            timer.innerHTML = "Time Remaining: " + time + " second(s)";
+            time --;
+        }, 1000)
+    }
+
+}
+
+function displayScore(){
+    console.log("nice")
+}
+
+
+buttonTrue.addEventListener('click', addScore)
+
+function addScore(){
+    if (buttonTrue){
+        score = (++score)
+    }
+    console.log(score)
     
 }
-
-function showQuestion (questions) {
-    questionElement.innerText = questions.question 
-
-}
-
-var questions = [
-    {
-        question: 'Question 1',
-        answers: [
-            {text: 'false', correct: false},
-            {text: 'false', correct: false},
-            {text: 'true', correct: true},
-            {text: 'false', correct: false},
-        ]
-    },
-    {
-        question: 'Question 2',
-        answers: [
-            {text: 'false', correct: false},
-            {text: 'true', correct: true},
-            {text: 'false', correct: false},
-            {text: 'false', correct: false},
-        ]
-    },
-    {
-        question: 'Question 3',
-        answers: [
-            {text: 'false', correct: false},
-            {text: 'false', correct: false},
-            {text: 'false', correct: false},
-            {text: 'true', correct: true},
-        ]
-    },
-    {
-        question: 'Question 4',
-        answers: [
-            {text: 'true', correct: true},
-            {text: 'false', correct: false},
-            {text: 'false', correct: false},
-            {text: 'false', correct: false},
-        ]
-    },
-    {
-        question: 'Question 5',
-        answers: [
-            {text: 'false', correct: false},
-            {text: 'true', correct: true},
-            {text: 'false', correct: false},
-            {text: 'false', correct: false},
-        ]
-    },
-]
+localStorage = (score)
+    
+   

@@ -11,19 +11,60 @@
     <header class = "header">
         <h1>Java<span id = "hero">Script</span> Quiz!</h1>
     </header>
+    <!-- Timer is hidden by default -->
+    <div id = "timer-element" class = "hide">
+        <div id = "timer">Must complete in 60 seconds to win!</div>
+    </div>
     <main>   
         <section class = "container">
-            <div id = "questions-card" class = "hide">
-                <div id = "question">Question 1</div>
+            <div id = "questions-card1" class = "hide">
+                <div id = "question">How do you declare a variable in JavaScript?</div>
                 <div id = "answers" class = "allButtons">
-                    <button class = "btn">Answer 1</button>
-                    <button class = "btn">Answer 2</button>
-                    <button class = "btn">Answer 3</button>
-                    <button class = "btn">Answer 4</button>
+                    <button class = "btn" id = "false">variable x </button>
+                    <button class = "btn" id = "true">var x </button>
+                    <button class = "btn" id = "false">var = x</button>
+                    <button class = "btn" id = "false">variable = x</button>
                 </div>        
             </div>
-            <div class = "Start">
+            <div id = "questions-card2" class = "hide">
+                <div id = "question">How do you retrieve the properties of an HTML id in JavaScript?</div>
+                <div id = "answers" class = "allButtons">
+                    <button class = "btn" id = "false">document.idProperties</button>
+                    <button class = "btn" id = "false">document.getIdByProperty</button>
+                    <button class = "btn" id = "true">document.getElementById</button>
+                    <button class = "btn" id = "false">document.findElementById</button>
+                </div>        
+            </div>
+            <div id = "questions-card3" class = "hide">
+                <div id = "question">What does this symbol mean? "===" </div>
+                <div id = "answers" class = "allButtons">
+                    <button class = "btn" id = "false">Equals</button>
+                    <button class = "btn" id = "true">Strictly Equals</button>
+                    <button class = "btn" id = "false">Similar</button>
+                    <button class = "btn" id = "false">Strictly Similar</button>
+                </div>        
+            </div>
+            <div id = "questions-card4" class = "hide">
+                <div id = "question">Which one of these statements will display a number to the console?</div>
+                <div id = "answers" class = "allButtons">
+                    <button class = "btn" id = "true">Console.log(2)</button>
+                    <button class = "btn" id = "false">Console.log("2")</button>
+                    <button class = "btn" id = "false">Console.log("Two")</button>
+                    <button class = "btn" id = "false">Console.log(Two)</button>
+                </div>        
+            </div>
+            <div id = "questions-card5" class = "hide">
+                <div id = "question">Bonus Question! What button displayed the correct answer to Question 2?</div>
+                <div id = "answers" class = "allButtons">
+                    <button class = "btn" id = "false">Button 1</button>
+                    <button class = "btn" id = "false">Button 2</button>
+                    <button class = "btn" id = "true">Button 3</button>
+                    <button class = "btn" id = "false">Button 4</button>
+                </div>        
+            </div>
+            <div class = "Controls">
                 <button id = "start-btn" class = "btn start-btn">Start Quiz!</button>
+                <button id = "next-btn" class = "btn next-btn hide">Next</button>
             </div>
         </section>
     </main>

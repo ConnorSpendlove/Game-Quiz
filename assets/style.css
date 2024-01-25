@@ -21,7 +21,7 @@ main {
 
 .header{
     background-color: #323330;
-    height: 110px;
+    height: 90px;
     color: aliceblue;
     font-size: 30px;
     display: flex;
@@ -39,6 +39,15 @@ main {
     color: #F0DB4F;
 }
 
+#timer-element {
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+    color: antiquewhite;
+    font-size: 40px;
+    padding: 5px;
+    height: 50px;
+}
 
 
 .container {
@@ -86,7 +95,7 @@ main {
     color: black;
 }
 
-.Start{
+.Controls{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,6 +108,16 @@ main {
     padding:  10px 30px;
     display: flex;
     justify-content: center;
+}
+
+
+.next-btn {
+    font-size: 30px;
+    font-weight: bold;
+    padding:  10px 30px;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(var(--hue), 100%, 70%);
 }
 
 .hide {
