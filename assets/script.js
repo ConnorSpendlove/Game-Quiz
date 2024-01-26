@@ -10,7 +10,11 @@ var questionsContainer5 = document.getElementById('questions-card5')
 
 // Retrieves true and false values of each answer
 var buttonFalse = document.getElementById('false')
-var buttonTrue = document.getElementById('true')
+var buttonTrue1 = document.getElementById('true1')
+var buttonTrue2 = document.getElementById('true2')
+var buttonTrue3 = document.getElementById('true3')
+var buttonTrue4 = document.getElementById('true4')
+var buttonTrue5 = document.getElementById('true5')
 
 var time = 60
 var timer = document.getElementById("timer-element")
@@ -78,15 +82,54 @@ function displayScore(){
 }
 
 
-buttonTrue.addEventListener('click', addScore)
+buttonTrue1.addEventListener('click', addScore)
 
 function addScore(){
-    if (buttonTrue){
+    if (buttonTrue1){
         score = (++score)
     }
     console.log(score)
     
 }
-localStorage = (score)
+
+buttonTrue2.addEventListener('click', addScore)
+
+function addScore(){
+    if (buttonTrue2){
+        score = (++score)
+    }
+    console.log(score)
+    
+}
+
+buttonTrue3.addEventListener('click', addScore)
+
+function addScore(){
+    if (buttonTrue3){
+        score = (++score)
+    }
+    console.log(score)
+    
+}
+
+buttonTrue4.addEventListener('click', addScore)
+
+function addScore(){
+    if (buttonTrue4){
+        score = (++score)
+    }
+    console.log(score)
+    
+}
+
+buttonTrue5.addEventListener('click', addScore)
+
+function addScore(){
+    if (buttonTrue5){
+        score = (++score)
+    }
+    console.log(score)
+    
+}
     
    
