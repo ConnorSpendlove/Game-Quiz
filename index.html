@@ -16,7 +16,7 @@
         <div id = "timer">Must complete in 60 seconds to win!</div>
     </div>
     <main>   
-        <section class = "container">
+        <section class = "container" id = "container">
             <div id = "questions-card1" class = "hide">
                 <div id = "question">How do you declare a variable in JavaScript?</div>
                 <div id = "answers" class = "allButtons">
@@ -63,8 +63,17 @@
                 </div>        
             </div>
             <div class = "Controls">
+                <p id = "p">Wrong answers = -5 seconds!</p>
                 <button id = "start-btn" class = "btn start-btn">Start Quiz!</button>
                 <button id = "next-btn" class = "btn next-btn hide">Next</button>
+            </div>
+            <div>
+                <div class = "hide top-score">Top Scores<hr></div>
+                <form class = "hide form" id = "form">
+                    <p>Please insert your initials to save your score!</p>
+                    <input type = "text" id = "initials" class = initials></input>
+                    <button type = "button" class = "btn submit-btn" id = "submit-btn">Submit</button>
+                </form>
             </div>
         </section>
     </main>

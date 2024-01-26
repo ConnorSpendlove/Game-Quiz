@@ -6,8 +6,6 @@
 
 :root {
     --hue-default: 280;
-    --hue-correct: 147;
-    --hue-incorrect: 0;
 }
 
 main {
@@ -84,21 +82,11 @@ main {
 }
 
 
-
-.btn.correct {
-    --hue: var(--hue-correct);
-    color: black;
-}
-
-.btn.incorrect {
-    --hue: var(--hue-incorrect);
-    color: black;
-}
-
 .Controls{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
@@ -110,6 +98,10 @@ main {
     justify-content: center;
 }
 
+#p {
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .next-btn {
     font-size: 30px;
@@ -119,6 +111,37 @@ main {
     justify-content: center;
     background-color: hsl(var(--hue), 100%, 70%);
 }
+
+
+
+.submit-btn{
+    font-size: 30px;
+    font-weight: bold;
+    padding:  10px 30px;
+    background-color: hsl(var(--hue), 100%, 70%);
+}
+
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form p {
+    
+    font-size: 25px;
+    flex-wrap: wrap;
+    font-weight: bold;
+
+}
+
+#initials {
+    font-size: 60px;
+    width: 135px;
+
+}
+
 
 .hide {
     display: none;
