@@ -2,7 +2,6 @@
 var startButton = document.getElementById('start-btn')
 var nextButton = document.getElementById('next-btn')
 var submitButton = document.getElementById('submit-btn')
-var userInput = document.getElementById('initials')
 
 var p = document.getElementById('p')
 
@@ -127,14 +126,27 @@ function displayScore(){
 
 submitButton.addEventListener('click', displayLeaderBoard)
 
-var allUsers = []
 
+
+var topScore = document.getElementById('top-scores')
+var userInput = document.getElementById("inputField")
+
+// displays the scores
 function displayLeaderBoard() {
-  allUsers = (userInput + allUsers)
-  localStorage.setItem("user", allUsers.value)
+  topScore.classList.remove('hide')
+  // creates a new "li" element that is equal to the value of the input box and the users score
+  var newItem = document.createElement("li");
+  newItem.textContent = (userInput.value + " - "  + "Score: " + score)
+  // creates a text spot for the newly created element
+  var itemContent = document.createTextNode(userInput.textContent);
+  // appends the new element to the dom
+  newItem.appendChild(itemContent);
+  var list = document.getElementById("user-record");
+  list.appendChild(newItem);
+
+
 
 }
-
 
 
 var falseButtons = document.querySelectorAll("#false");

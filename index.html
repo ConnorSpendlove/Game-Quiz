@@ -15,6 +15,10 @@
     <div id = "timer-element" class = "hide">
         <div id = "timer">Must complete in 60 seconds to win!</div>
     </div>
+    <div class = "hide top-scores" id ="top-scores">
+        <h2>Top scores</h2>
+        <ul class = "user-record" id = "user-record"></ul>
+    </div>
     <main>   
         <section class = "container" id = "container">
             <div id = "questions-card1" class = "hide">
@@ -71,12 +75,14 @@
                 <div class = "hide top-score">Top Scores<hr></div>
                 <form class = "hide form" id = "form">
                     <p>Please insert your initials to save your score!</p>
-                    <input type = "text" id = "initials" class = initials></input>
+                    <input type="text" id="inputField" placeholder="text">
                     <button type = "button" class = "btn submit-btn" id = "submit-btn">Submit</button>
                 </form>
             </div>
         </section>
     </main>
+  
+    
     <script src="assets/script.js"></script>
 </body>
 </html>
