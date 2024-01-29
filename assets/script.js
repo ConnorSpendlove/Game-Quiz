@@ -131,20 +131,22 @@ submitButton.addEventListener('click', displayLeaderBoard)
 var topScore = document.getElementById('top-scores')
 var userInput = document.getElementById("inputField")
 
+
+
 // displays the scores
 function displayLeaderBoard() {
-  topScore.classList.remove('hide')
+  
+  topScore.classList.remove("hide")
   // creates a new "li" element that is equal to the value of the input box and the users score
   var newItem = document.createElement("li");
-  newItem.textContent = (userInput.value + " - "  + "Score: " + score)
+  newItem.textContent =(userInput.value + " - "  + "Score: " + score)
   // creates a text spot for the newly created element
   var itemContent = document.createTextNode(userInput.textContent);
   // appends the new element to the dom
   newItem.appendChild(itemContent);
   var list = document.getElementById("user-record");
   list.appendChild(newItem);
-
-
+  localStorage.setItem("score", newItem.textContent)
 
 }
 
