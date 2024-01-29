@@ -135,7 +135,6 @@ var userInput = document.getElementById("inputField")
 
 // displays the scores
 function displayLeaderBoard() {
-  
   topScore.classList.remove("hide")
   // creates a new "li" element that is equal to the value of the input box and the users score
   var newItem = document.createElement("li");
@@ -152,7 +151,6 @@ function displayLeaderBoard() {
 
 
 var falseButtons = document.querySelectorAll("#false");
-
 // adds event listener for each false button that turns them red on click
 falseButtons.forEach(function(button) {
   button.addEventListener("click", function(){

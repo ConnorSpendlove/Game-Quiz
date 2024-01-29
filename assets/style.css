@@ -1,13 +1,16 @@
+/* sets font family and default margin/padding for the whole website */
 * {
     font-family:Georgia, 'Times New Roman', Times, serif;
     padding: 0;
     margin: 0;
 }
 
+/* makes a variable */
 :root {
     --hue-default: 280;
 }
 
+/* sets the background color and centers the content */
 main {
     --hue: var(--hue-default);
     display: flex;
@@ -17,6 +20,7 @@ main {
     background-color: hsl(var(--hue), 100%, 24%);
 }
 
+/* makes a header and centers it vertically in the left side of the screen*/
 .header{
     background-color: #323330;
     height: 90px;
@@ -24,19 +28,19 @@ main {
     font-size: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
-    
 }
 
+/* adds margin to the header text */
 .header h1 {
     margin-left: 20px;
 }
 
+/* changes the color of the span in the header */
 .header span {
     color: #F0DB4F;
 }
 
+/* sets properties of the topscores element */
 .top-scores {
     display: flex;
     justify-content: center;
@@ -49,11 +53,13 @@ main {
     text-decoration: underline;
 }
 
+/* makes all user records display as a column */
 .user-record {
     display: flex;
     flex-direction: column;
 }
 
+/* sets the timer element properties */
 #timer-element {
     display: flex;
     justify-content: center;
@@ -64,7 +70,7 @@ main {
     height: 50px;
 }
 
-
+/* sets properties of the main contanier of the page */
 .container {
     background-color:antiquewhite;
     border-radius: 20px;
@@ -73,18 +79,19 @@ main {
     width: 750px;
     max-width: 80%
 }
-
+/* properties of every answer button */
 .allButtons {
     margin: 20px;
     display:flex;
     flex-direction: column;
 }
-
+/* properties of the questions text */
 #question {
     font-size: 40px;
     color:black;
 }
 
+/* properties of all buttons on the website */
 .btn {
     font-size: 34px;
     color: white;
@@ -93,12 +100,13 @@ main {
     border-radius: 10px;
 }
 
+/* makes all button change color when hovered over */
 .btn:hover {
     background-color: hsl(var(--hue), 100%, 15%);
     transition:ease-in 0.2s;
 }
 
-
+/* properties of the controls, which include the start and next button */
 .Controls{
     display: flex;
     justify-content: center;
@@ -107,6 +115,7 @@ main {
 
 }
 
+/* start button properties */
 .start-btn {
     font-size: 50px;
     font-weight: bold;
@@ -115,11 +124,13 @@ main {
     justify-content: center;
 }
 
+/* properties of the text displayed right above the start button */
 #p {
     font-size: 20px;
     font-weight: bold;
 }
 
+/* sets properties of the next button */
 .next-btn {
     font-size: 30px;
     font-weight: bold;
@@ -129,8 +140,7 @@ main {
     background-color: hsl(var(--hue), 100%, 70%);
 }
 
-
-
+/* sets properties of the submit button */
 .submit-btn{
     font-size: 30px;
     font-weight: bold;
@@ -138,28 +148,27 @@ main {
     background-color: hsl(var(--hue), 100%, 70%);
 }
 
-
+/* properties of the form class */
 .form {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/* properties of the message by the input field upon quiz completion */
 .form p {
-    
     font-size: 25px;
     flex-wrap: wrap;
     font-weight: bold;
-
 }
 
+/* properties of the user score input field */
 #inputField {
     font-size: 60px;
     width: 135px;
-
 }
 
-
+/* class to make things be hidden by default */
 .hide {
     display: none;
 }
