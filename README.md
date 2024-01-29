@@ -9,6 +9,6 @@ To use this webpage, click the start button and navigate through all the questio
 ## Deployment Link
 [JavaScript Quiz](https://connorspendlove.github.io/JavaScript-Quiz/)
 ## Screenshot
-
+![](assets/images/screenshot.png)
 ## License
 Please refer to the license in the repo
